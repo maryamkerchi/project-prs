@@ -16,22 +16,22 @@ if (!moves.find((move) => move === userMove)) {
   //   process.exit(1);  error end
 }
 
-//  pc move randomly
+//  pc move randomly from array
 const pcMove = moves[Math.floor(Math.random() * 3)];
 
 // 5. Output both moves
 console.log(`User chose: ${userMove}`);
 console.log(`PC chose: ${pcMove}`);
 
-// 6. Determine the winner
+// 6. how get the winner
 if (userMove === pcMove) {
-  console.log("no winner!");
+  console.log("noOne winner!");
 } else if (
   (userMove === "scissors" && pcMove === "paper") ||
   (userMove === "rock" && pcMove === "scissors") ||
   (userMove === "paper" && pcMove === "rock")
 ) {
-  console.log("user win!");
+  console.log("fotunately user win!");
 } else {
-  console.log("pc win!");
+  console.log(" Unfortunately pc win!");
 }
